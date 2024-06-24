@@ -48,4 +48,13 @@ class FizzBuzzTest {
         Assertions.assertThat(fizzBuzz.calculate(23)).isEqualTo("Fizz");
     }
 
+    @Test
+    void if_there_is_a_number_5_duplicate_Buzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assertions.assertThat(fizzBuzz.calculate(5)).isEqualTo("BuzzBuzz");
+        Assertions.assertThat(fizzBuzz.calculate(25)).isEqualTo("BuzzBuzz");
+        Assertions.assertThat(fizzBuzz.calculate(50)).isEqualTo("BuzzBuzz");
+    }
+
 }
