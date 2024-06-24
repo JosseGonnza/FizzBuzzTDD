@@ -45,7 +45,7 @@ class FizzBuzzTest {
 
         Assertions.assertThat(fizzBuzz.calculate(3)).isEqualTo("FizzFizz");
         Assertions.assertThat(fizzBuzz.calculate(13)).isEqualTo("Fizz");
-        Assertions.assertThat(fizzBuzz.calculate(23)).isEqualTo("Fizz");
+        Assertions.assertThat(fizzBuzz.calculate(33)).isEqualTo("FizzFizz");
     }
 
     @Test
@@ -53,8 +53,15 @@ class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         Assertions.assertThat(fizzBuzz.calculate(5)).isEqualTo("BuzzBuzz");
-        Assertions.assertThat(fizzBuzz.calculate(25)).isEqualTo("BuzzBuzz");
-        Assertions.assertThat(fizzBuzz.calculate(50)).isEqualTo("BuzzBuzz");
+        Assertions.assertThat(fizzBuzz.calculate(15)).isEqualTo("FizzBuzzBuzz");
+        Assertions.assertThat(fizzBuzz.calculate(55)).isEqualTo("BuzzBuzz");
     }
 
+    @Test
+    void if_there_is_a_number_5_and_3_duplicate_Fizz_and_Buzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assertions.assertThat(fizzBuzz.calculate(35)).isEqualTo("FizzBuzzBuzz");
+        Assertions.assertThat(fizzBuzz.calculate(53)).isEqualTo("FizzBuzz");
+    }
 }

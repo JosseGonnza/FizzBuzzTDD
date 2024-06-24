@@ -9,11 +9,11 @@ public class FizzBuzz {
         if (number % 3 == 0) {
             result.append("Fizz");
         }
-        if (number % 5 == 0) {
-            result.append("Buzz");
-        }
         if (containsNum3(number)) {
             result.append("Fizz");
+        }
+        if (number % 5 == 0) {
+            result.append("Buzz");
         }
         if (containsNum5(number)) {
             result.append("Buzz");
